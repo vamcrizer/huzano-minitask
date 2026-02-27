@@ -1641,7 +1641,7 @@
                   "type": "frame",
                   "id": "COXWo",
                   "name": "sBox1",
-                  "width": 106,
+                  "width": 171,
                   "fill": "$--bg-base",
                   "cornerRadius": 20,
                   "stroke": {
