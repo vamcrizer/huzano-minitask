@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê - ADMIN EXAM</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="flex flex-row h-screen">
+
+    <!-- Admin Sidebar -->
+    <aside class="sidebar justify-between">
+        <div class="flex-col gap-10 w-full">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
+                <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
+            </div>
+
+            <!-- Nav Menu -->
+            <nav class="flex-col gap-3 w-full">
+                <div class="nav-item inactive" onclick="navigateTo('admin-dashboard.html')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                    </svg>
+                    <span>Quản lý Kỳ thi</span>
+                </div>
+                <div class="nav-item inactive" onclick="navigateTo('admin-users.html')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Quản lý Sinh viên</span>
+                </div>
+                <div class="nav-item active" onclick="navigateTo('admin-stats.html')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        class="text-red" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 20V10"></path>
+                        <path d="M12 20V4"></path>
+                        <path d="M6 20v-6"></path>
+                    </svg>
+                    <span>Thống kê</span>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Logout -->
+        <a href="admin-login.html" class="nav-item inactive mt-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="text-muted" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Đăng xuất</span>
+        </a>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="main-content mx-auto" style="max-width: 1000px; padding: 3rem;">
+
+        <div class="surface-raised rounded-4xl p-12 flex-col gap-8 w-full">
+            <!-- Header -->
+            <div class="flex justify-between items-center w-full">
+                <div class="flex-col gap-2">
+                    <h1 class="font-primary text-3xl font-bold text-main tracking-tight">Thống kê tổng hợp</h1>
+                    <p class="font-secondary text-base text-muted">Dữ liệu sinh viên tham gia kỳ thi</p>
+                </div>
+                <button
+                    class="surface-sunken flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-base font-bold tracking-tight text-main cursor-pointer"
+                    style="border: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Xuất PDF
+                </button>
+            </div>
+
+            <!-- KPIs -->
+            <div class="flex gap-6 w-full">
+                <div class="surface-sunken flex-col justify-center items-start rounded-3xl p-6 gap-2 flex-1">
+                    <span class="font-primary text-4xl font-bold tracking-tighter text-red-dark">1,248</span>
+                    <span class="font-secondary text-sm font-semibold text-muted">Tổng số lượt thi</span>
+                </div>
+                <div class="surface-sunken flex-col justify-center items-start rounded-3xl p-6 gap-2 flex-1">
+                    <span class="font-primary text-4xl font-bold tracking-tighter" style="color: #16A34A;">8.2</span>
+                    <span class="font-secondary text-sm font-semibold text-muted">Điểm trung bình</span>
+                </div>
+                <div class="surface-raised flex-col justify-center items-start rounded-3xl p-6 gap-2 flex-1"
+                    style="box-shadow: inset 0px 0px 0px 2px var(--ptit-red);">
+                    <span class="font-primary text-4xl font-bold tracking-tighter text-red">94%</span>
+                    <span class="font-secondary text-sm font-semibold text-main">Tỷ lệ hoàn thành</span>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="surface-sunken rounded-3xl p-8 flex-col gap-4 w-full h-64 mt-4">
+                <h3 class="font-primary text-xl font-bold text-main tracking-tight">Biểu đồ phân phối điểm</h3>
+
+                <div class="bar-chart">
+                    <div class="bar" style="height: 25%;"></div>
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                    <div class="bar highlight" style="height: 100%;"></div>
+                    <div class="bar" style="height: 90%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                    <div class="bar" style="height: 50%;"></div>
+                    <div class="bar" style="height: 30%;"></div>
+                    <div class="bar" style="height: 10%;"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

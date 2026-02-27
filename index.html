@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - PTIT EXAM</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center">
+
+    <div class="max-w-md surface-raised rounded-3xl p-12 flex-col gap-6 w-full">
+
+        <!-- Header -->
+        <div class="flex-col items-center gap-3 w-full">
+            <div class="flex items-center gap-3 p-4 rounded-full surface-raised w-fit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    class="text-red-dark" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <h1 class="font-primary text-2xl font-bold text-red-dark tracking-tight">PTIT EXAM</h1>
+            </div>
+            <h2 id="auth-title" class="font-secondary text-xl font-semibold text-main">Đăng nhập tài khoản</h2>
+            <p class="font-secondary text-sm text-muted">Hệ thống thi trắc nghiệm trực tuyến</p>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="flex-col gap-5 w-full" onsubmit="handleLogin(event, false)">
+            <div class="flex-col gap-2 w-full">
+                <label class="font-secondary text-sm font-semibold text-main tracking-tight">Tên đăng nhập / Mã
+                    SV</label>
+                <div class="surface-sunken rounded-xl p-4 w-full">
+                    <input type="text" class="input-field" placeholder="B20DCCNxx..." required>
+                </div>
+            </div>
+
+            <div class="flex-col gap-2 w-full">
+                <label class="font-secondary text-sm font-semibold text-main tracking-tight">Mật khẩu</label>
+                <div class="surface-sunken rounded-xl p-4 w-full">
+                    <input type="password" class="input-field" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <div class="flex-col gap-5 w-full mt-3">
+                <button type="submit"
+                    class="btn-primary rounded-xl py-4 w-full font-secondary text-base font-bold tracking-tight">
+                    Đăng Nhập
+                </button>
+                <div class="flex justify-center items-center gap-2">
+                    <span class="font-secondary text-sm text-muted">Chưa có tài khoản?</span>
+                    <a href="#" class="font-secondary text-sm font-bold text-red-dark"
+                        onclick="toggleAuthMode('register')">Đăng ký ngay</a>
+                </div>
+                <!-- Nav to Admin Login -->
+                <div class="flex justify-center items-center gap-2">
+                    <span class="font-secondary text-sm text-muted">Dành cho Giảng viên:</span>
+                    <a href="admin-login.html" class="font-secondary text-sm font-bold text-main">Đăng nhập Admin</a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Register Form -->
+        <form id="register-form" class="flex-col gap-5 w-full hidden" onsubmit="toggleAuthMode('login')">
+            <div class="flex-col gap-2 w-full">
+                <div class="surface-sunken rounded-xl p-4 w-full">
+                    <input type="text" class="input-field" placeholder="Họ và tên" required>
+                </div>
+            </div>
+            <div class="flex-col gap-2 w-full">
+                <div class="surface-sunken rounded-xl p-4 w-full">
+                    <input type="email" class="input-field" placeholder="Email GV/SV" required>
+                </div>
+            </div>
+            <div class="flex-col gap-2 w-full">
+                <div class="surface-sunken rounded-xl p-4 w-full">
+                    <input type="password" class="input-field" placeholder="Mật khẩu" required>
+                </div>
+            </div>
+            <div class="flex-col gap-2 w-full">
+                <div class="surface-sunken rounded-xl p-4 w-full">
+                    <input type="password" class="input-field" placeholder="Xác nhận mật khẩu" required>
+                </div>
+            </div>
+
+            <div class="flex-col gap-5 w-full mt-3">
+                <button type="submit"
+                    class="btn-primary rounded-xl py-4 w-full font-secondary text-base font-bold tracking-tight">
+                    Đăng Ký
+                </button>
+                <div class="flex justify-center items-center gap-2">
+                    <span class="font-secondary text-sm text-muted">Thoát?</span>
+                    <a href="#" class="font-secondary text-sm font-bold text-red-dark"
+                        onclick="toggleAuthMode('login')">Quay lại Đăng nhập</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

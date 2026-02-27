@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm bài thi - PTIT EXAM</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="flex flex-col h-screen overflow-hidden">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <div class="flex-col gap-1">
+            <h1 class="font-primary text-xl font-bold text-red-dark tracking-tight">Cơ sở dữ liệu - Giữa kỳ</h1>
+            <p class="font-secondary text-sm font-semibold text-muted">Sinh viên: B20DCCN001</p>
+        </div>
+
+        <div class="surface-sunken rounded-2xl py-3 px-6 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="text-red" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span class="font-primary text-2xl font-bold text-red-dark tracking-tight">45:00</span>
+        </div>
+
+        <button class="btn-primary rounded-xl py-3 px-6 font-secondary text-base font-bold tracking-tight"
+            onclick="navigateTo('result.html')">
+            Nộp bài
+        </button>
+    </header>
+
+    <!-- Main Play Area -->
+    <main class="flex flex-1 p-12 gap-10 w-full overflow-hidden">
+
+        <!-- Left: Question Area -->
+        <div class="flex-1 flex-col gap-8 h-full overflow-y-auto pr-2">
+
+            <!-- Question Card -->
+            <div class="surface-raised rounded-3xl p-8 flex-col gap-6">
+                <!-- Question Text -->
+                <h2 class="font-secondary text-base font-bold text-main">Câu 1: Câu lệnh SQL nào dùng để truy xuất dữ
+                    liệu từ database?</h2>
+
+                <!-- Options -->
+                <div class="flex-col gap-4">
+                    <!-- Opt A -->
+                    <div id="opt1A" class="opt-card inactive" onclick="selectOption('1', 'opt1A')">
+                        <div class="opt-chk"></div>
+                        <span class="font-secondary text-sm font-semibold text-muted">A. EXTRACT</span>
+                    </div>
+
+                    <!-- Opt B (Selected visually) -->
+                    <div id="opt1B" class="opt-card active" onclick="selectOption('1', 'opt1B')">
+                        <div class="opt-chk" style="border: none; background-color: var(--ptit-red);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="font-secondary text-sm font-bold text-red-dark">B. SELECT</span>
+                    </div>
+
+                    <!-- Opt C -->
+                    <div id="opt1C" class="opt-card inactive" onclick="selectOption('1', 'opt1C')">
+                        <div class="opt-chk"></div>
+                        <span class="font-secondary text-sm font-semibold text-muted">C. UPDATE</span>
+                    </div>
+                </div>
+            </div> <!-- End QCard -->
+
+            <!-- Another Question to demonstrate scrolling -->
+            <div class="surface-raised rounded-3xl p-8 flex-col gap-6">
+                <h2 class="font-secondary text-base font-bold text-main">Câu 2: Câu lệnh nào xóa Cột trong Bảng CSDL?
+                </h2>
+                <div class="flex-col gap-4">
+                    <div class="opt-card inactive">
+                        <div class="opt-chk"></div>
+                        <span class="font-secondary text-sm font-semibold text-muted">A. DROP COLUMN</span>
+                    </div>
+                    <div class="opt-card inactive">
+                        <div class="opt-chk"></div>
+                        <span class="font-secondary text-sm font-semibold text-muted">B. MINUS COLUMN</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: Nav Area -->
+        <aside class="surface-raised rounded-3xl p-8 flex-col gap-6 w-full" style="max-width: 340px; height: 100%;">
+            <h2 class="font-primary text-xl font-bold text-main tracking-tight">Danh sách câu hỏi</h2>
+
+            <div class="flex gap-3" style="flex-wrap: wrap;">
+                <div class="q-box unanswered">1</div>
+                <!-- Answered Box (Red Highlight) -->
+                <div id="qbox-2" class="q-box answered">2</div>
+                <div class="q-box unanswered">3</div>
+                <div class="q-box unanswered">4</div>
+                <div class="q-box unanswered">5</div>
+                <div class="q-box unanswered">6</div>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

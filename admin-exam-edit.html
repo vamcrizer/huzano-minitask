@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo/Sửa Kỳ thi - ADMIN EXAM</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="flex flex-row h-screen">
+
+    <aside class="sidebar justify-between">
+        <div class="flex-col gap-10 w-full">
+            <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
+                <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
+            </div>
+
+            <nav class="flex-col gap-3 w-full">
+                <div class="nav-item active" onclick="navigateTo('admin-dashboard.html')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        class="text-red" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                    </svg>
+                    <span>Về Quản lý Kỳ thi</span>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- Header -->
+        <div class="flex justify-between items-center w-full">
+            <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Tạo Kỳ Thi Mới</h1>
+            <button class="btn-primary rounded-xl py-3 px-8 font-secondary text-base font-bold tracking-tight"
+                onclick="navigateTo('admin-dashboard.html')">
+                Lưu & Xuất bản
+            </button>
+        </div>
+
+        <div class="flex w-full gap-8 h-full">
+            <!-- Col 1: General Info -->
+            <div class="flex-col gap-6" style="width: 400px; height: 100%;">
+                <div class="surface-raised rounded-3xl p-8 flex-col gap-6 flex-1">
+                    <h2 class="font-secondary text-xl font-bold text-main">Thông tin chung</h2>
+
+                    <div class="flex-col gap-2">
+                        <div class="surface-sunken rounded-xl p-4 w-full">
+                            <input type="text" class="input-field" placeholder="Tên kỳ thi">
+                        </div>
+                    </div>
+                    <div class="flex-col gap-2">
+                        <div class="surface-sunken rounded-xl p-4 w-full h-32 flex items-start">
+                            <textarea class="input-field" placeholder="Mô tả..."
+                                style="height: 100%; resize: none;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 2: Questions -->
+            <div class="flex-col gap-6 flex-1 h-full">
+                <div class="surface-raised rounded-3xl p-8 flex-col gap-6 flex-1">
+                    <h2 class="font-secondary text-xl font-bold text-main">Danh sách câu hỏi & Đề thi</h2>
+
+                    <div class="surface-sunken rounded-2xl p-10 flex-col items-center justify-center gap-3 w-full border-dashed"
+                        style="border: 2px dashed var(--shadow-dark); cursor: pointer;">
+                        <span class="font-secondary text-lg font-bold text-main">Kéo thả file Excel vào đây</span>
+                        <span class="font-secondary text-sm text-muted">hoặc click để tải lên</span>
+                    </div>
+
+                    <span class="font-secondary text-sm text-center text-muted w-full block">Hoặc thêm thủ công</span>
+
+                    <button class="btn-ghost rounded-xl py-3 px-6 mx-auto">
+                        + Thêm 1 câu hỏi
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
