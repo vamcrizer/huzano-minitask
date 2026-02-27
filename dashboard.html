@@ -18,77 +18,22 @@
             <div class="flex-col gap-8 w-full">
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        class="text-red"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                    </svg>
+                    <i class="fas fa-graduation-cap fa-fw text-red" style="font-size: 2rem;"></i>
                     <span class="font-primary text-xl font-bold text-red-dark tracking-tight">PTIT EXAM</span>
                 </div>
 
                 <!-- Nav Menu -->
                 <nav class="flex-col gap-3 w-full">
                     <div class="nav-item active">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <rect x="3" y="3" width="7" height="9"></rect>
-                            <rect x="14" y="3" width="7" height="5"></rect>
-                            <rect x="14" y="12" width="7" height="9"></rect>
-                            <rect x="3" y="16" width="7" height="5"></rect>
-                        </svg>
+                        <i class="fal fa-th-large fa-fw" style="font-size: 1.25rem;"></i>
                         <span>Kỳ thi của tôi</span>
                     </div>
                     <div class="nav-item inactive">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
+                        <i class="fal fa-clock fa-fw" style="font-size: 1.25rem;"></i>
                         <span>Kết quả thi</span>
                     </div>
                     <div class="nav-item inactive">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
+                        <i class="fal fa-user fa-fw" style="font-size: 1.25rem;"></i>
                         <span>Hồ sơ cá nhân</span>
                     </div>
                 </nav>
@@ -96,22 +41,7 @@
 
             <!-- Logout -->
             <a href="index.html" class="nav-item inactive mt-auto">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="text-muted"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                    <polyline points="16 17 21 12 16 7"></polyline>
-                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                </svg>
+                <i class="fal fa-sign-out-alt fa-fw text-muted" style="font-size: 1.5rem;"></i>
                 <span>Đăng xuất</span>
             </a>
         </aside>
@@ -127,38 +57,11 @@
             <!-- Toolbar -->
             <div class="flex gap-4 w-full items-center">
                 <div class="surface-sunken rounded-4xl py-3 px-6 flex items-center gap-3 w-full max-w-md">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        class="text-muted"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
+                    <i class="fal fa-search fa-fw text-muted" style="font-size: 1.25rem;"></i>
                     <input type="text" class="input-field" placeholder="Tìm kiếm..." />
                 </div>
                 <div class="surface-raised rounded-4xl py-3 px-6 flex items-center gap-3 cursor-pointer">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        class="text-main"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                    </svg>
+                    <i class="fal fa-filter fa-fw text-main" style="font-size: 1.25rem;"></i>
                     <span class="font-secondary text-base font-semibold text-main">Loại: Tất cả</span>
                 </div>
             </div>

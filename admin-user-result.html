@@ -1,125 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kết quả Sinh viên - ADMIN EXAM</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kết quả Sinh viên - ADMIN EXAM</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-
-</head>
-
-<body class="flex flex-row h-screen">
-
-    <aside class="sidebar justify-between">
-        <div class="flex-col gap-10 w-full">
-            <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
-                <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
-            </div>
-
-            <nav class="flex-col gap-3 w-full">
-                <div class="nav-item active" onclick="navigateTo('admin-users.html')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        class="text-red" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M19 12H5"></path>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                    </svg>
-                    <span>Về Quản lý Sinh viên</span>
+    <body class="flex flex-row h-screen">
+        <aside class="sidebar justify-between">
+            <div class="flex-col gap-10 w-full">
+                <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
+                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem;"></i>
+                    <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
                 </div>
-            </nav>
-        </div>
-    </aside>
 
-    <main class="main-content">
-        <!-- Header -->
-        <div class="flex justify-between items-center w-full">
-            <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Kết quả Sinh viên</h1>
-            <div class="surface-sunken rounded-2xl py-3 px-6 flex items-center gap-3 w-64">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    class="text-muted" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" class="input-field" placeholder="Tìm Mã SV / Tên...">
+                <nav class="flex-col gap-3 w-full">
+                    <div class="nav-item active" onclick="navigateTo('admin-users.html')">
+                        <i class="fal fa-arrow-left fa-fw text-red" style="font-size: 1.25rem;"></i>
+                        <span>Về Quản lý Sinh viên</span>
+                    </div>
+                </nav>
             </div>
-        </div>
+        </aside>
 
-        <!-- Profile Card -->
-        <div class="surface-raised rounded-3xl p-8 w-full flex items-center gap-6">
-            <div class="surface-sunken rounded-full w-20 h-20 flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                    class="text-muted" stroke="currentColor" stroke-width="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-            </div>
-            <div class="flex-col gap-2 flex-1">
-                <h2 class="font-primary text-3xl font-bold text-main tracking-tight">Nguyễn Văn A - B20DCCN001</h2>
-                <p class="font-secondary text-base text-muted">Lớp: D20CQCN01-B &bull; Số lượt thi: 12</p>
-            </div>
-            <button
-                class="surface-sunken flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-sm font-bold tracking-tight text-main cursor-pointer"
-                style="border: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                    <rect x="6" y="14" width="12" height="8"></rect>
-                </svg>
-                In báo cáo
-            </button>
-        </div>
-
-        <!-- Table Area -->
-        <div class="surface-raised rounded-3xl p-4 w-full flex-col">
-            <!-- Header Row -->
-            <div class="flex gap-4 w-full table-header items-center px-6 py-4">
-                <span class="font-secondary text-sm font-bold text-muted" style="flex: 2;">Kỳ thi</span>
-                <span class="font-secondary text-sm font-bold text-muted flex-1">Điểm</span>
-                <span class="font-secondary text-sm font-bold text-muted" style="width: 150px;">Hành động</span>
+        <main class="main-content">
+            <!-- Header -->
+            <div class="flex justify-between items-center w-full">
+                <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Kết quả Sinh viên</h1>
+                <div class="surface-sunken rounded-2xl py-3 px-6 flex items-center gap-3 w-64">
+                    <i class="fal fa-search fa-fw text-muted" style="font-size: 1rem;"></i>
+                    <input type="text" class="input-field" placeholder="Tìm Mã SV / Tên..." />
+                </div>
             </div>
 
-            <!-- Row 1 -->
-            <div class="flex gap-4 w-full items-center px-6 py-5">
-                <span class="font-secondary text-base font-semibold text-main" style="flex: 2;">Mạng máy tính</span>
-                <div class="flex-1">
-                    <div class="badge-green rounded-full px-3 py-1 flex items-center gap-2" style="width:fit-content;">
-                        <span class="font-secondary text-sm font-bold">8.5 (Hoàn thành)</span>
+            <!-- Profile Card -->
+            <div class="surface-raised rounded-3xl p-8 w-full flex items-center gap-6">
+                <div class="surface-sunken rounded-full w-20 h-20 flex justify-center items-center">
+                    <i class="fal fa-user fa-fw text-muted" style="font-size: 2rem;"></i>
+                </div>
+                <div class="flex-col gap-2 flex-1">
+                    <h2 class="font-primary text-3xl font-bold text-main tracking-tight">Nguyễn Văn A - B20DCCN001</h2>
+                    <p class="font-secondary text-base text-muted">Lớp: D20CQCN01-B &bull; Số lượt thi: 12</p>
+                </div>
+                <button
+                    class="surface-sunken flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-sm font-bold tracking-tight text-main cursor-pointer"
+                    style="border: none"
+                >
+                    <i class="fal fa-print fa-fw" style="font-size: 1.25rem;"></i>
+                    In báo cáo
+                </button>
+            </div>
+
+            <!-- Table Area -->
+            <div class="surface-raised rounded-3xl p-4 w-full flex-col">
+                <!-- Header Row -->
+                <div class="flex gap-4 w-full table-header items-center px-6 py-4">
+                    <span class="font-secondary text-sm font-bold text-muted" style="flex: 2">Kỳ thi</span>
+                    <span class="font-secondary text-sm font-bold text-muted flex-1">Điểm</span>
+                    <span class="font-secondary text-sm font-bold text-muted" style="width: 150px">Hành động</span>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="flex gap-4 w-full items-center px-6 py-5">
+                    <span class="font-secondary text-base font-semibold text-main" style="flex: 2">Mạng máy tính</span>
+                    <div class="flex-1">
+                        <div
+                            class="badge-green rounded-full px-3 py-1 flex items-center gap-2"
+                            style="width: fit-content"
+                        >
+                            <span class="font-secondary text-sm font-bold">8.5 (Hoàn thành)</span>
+                        </div>
+                    </div>
+                    <div style="width: 150px">
+                        <button
+                            class="btn-primary rounded-xl px-4 py-2 font-secondary text-sm font-semibold text-white tracking-tight"
+                        >
+                            Xem bài làm
+                        </button>
                     </div>
                 </div>
-                <div style="width: 150px;">
-                    <button
-                        class="btn-primary rounded-xl px-4 py-2 font-secondary text-sm font-semibold text-white tracking-tight">Xem
-                        bài làm</button>
-                </div>
-            </div>
 
-            <!-- Row 2 -->
-            <div class="flex gap-4 w-full items-center px-6 py-5">
-                <span class="font-secondary text-base font-semibold text-main" style="flex: 2;">Cơ sở dữ liệu - Giữa
-                    kỳ</span>
-                <div class="flex-1">
-                    <div class="badge-red rounded-full px-3 py-1 flex items-center gap-2" style="width:fit-content;">
-                        <span class="font-secondary text-sm font-bold">0.0 (Chưa nộp)</span>
+                <!-- Row 2 -->
+                <div class="flex gap-4 w-full items-center px-6 py-5">
+                    <span class="font-secondary text-base font-semibold text-main" style="flex: 2"
+                        >Cơ sở dữ liệu - Giữa kỳ</span
+                    >
+                    <div class="flex-1">
+                        <div
+                            class="badge-red rounded-full px-3 py-1 flex items-center gap-2"
+                            style="width: fit-content"
+                        >
+                            <span class="font-secondary text-sm font-bold">0.0 (Chưa nộp)</span>
+                        </div>
+                    </div>
+                    <div style="width: 150px">
+                        <button
+                            class="btn-primary rounded-xl px-4 py-2 font-secondary text-sm font-semibold text-white tracking-tight"
+                        >
+                            Chi tiết
+                        </button>
                     </div>
                 </div>
-                <div style="width: 150px;">
-                    <button
-                        class="btn-primary rounded-xl px-4 py-2 font-secondary text-sm font-semibold text-white tracking-tight">Chi
-                        tiết</button>
-                </div>
             </div>
+        </main>
 
-        </div>
-
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>

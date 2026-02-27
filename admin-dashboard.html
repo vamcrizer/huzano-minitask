@@ -1,136 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản lý Kỳ thi - ADMIN EXAM</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý Kỳ thi - ADMIN EXAM</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-</head>
+    <body class="flex flex-row h-screen">
+        <!-- Admin Sidebar -->
+        <aside class="sidebar justify-between">
+            <div class="flex-col gap-10 w-full">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
+                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem;"></i>
+                    <h1 class="font-primary text-xl font-bold text-main tracking-tight text-red">ADMIN EXAM</h1>
+                </div>
 
-<body class="flex flex-row h-screen">
-
-    <!-- Admin Sidebar -->
-    <aside class="sidebar justify-between">
-        <div class="flex-col gap-10 w-full">
-            <!-- Logo -->
-            <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
-                <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
+                <!-- Nav Menu -->
+                <nav class="flex-col gap-3 w-full">
+                    <div class="nav-item active" onclick="navigateTo('admin-dashboard.html')">
+                        <i class="fal fa-th-large fa-fw text-red" style="font-size: 1.25rem;"></i>
+                        <span>Quản lý Kỳ thi</span>
+                    </div>
+                    <div class="nav-item inactive" onclick="navigateTo('admin-users.html')">
+                        <i class="fal fa-users fa-fw" style="font-size: 1.25rem;"></i>
+                        <span>Quản lý Sinh viên</span>
+                    </div>
+                    <div class="nav-item inactive" onclick="navigateTo('admin-stats.html')">
+                        <i class="fal fa-chart-bar fa-fw" style="font-size: 1.25rem;"></i>
+                        <span>Thống kê</span>
+                    </div>
+                </nav>
             </div>
 
-            <!-- Nav Menu -->
-            <nav class="flex-col gap-3 w-full">
-                <div class="nav-item active" onclick="navigateTo('admin-dashboard.html')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        class="text-red" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <rect x="3" y="14" width="7" height="7"></rect>
-                        <rect x="14" y="14" width="7" height="7"></rect>
-                        <rect x="14" y="3" width="7" height="7"></rect>
-                        <rect x="3" y="3" width="7" height="7"></rect>
-                    </svg>
-                    <span>Quản lý Kỳ thi</span>
-                </div>
-                <div class="nav-item inactive" onclick="navigateTo('admin-users.html')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <span>Quản lý Sinh viên</span>
-                </div>
-                <div class="nav-item inactive" onclick="navigateTo('admin-stats.html')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 20V10"></path>
-                        <path d="M12 20V4"></path>
-                        <path d="M6 20v-6"></path>
-                    </svg>
-                    <span>Thống kê</span>
-                </div>
-            </nav>
-        </div>
+            <!-- Logout -->
+            <a href="admin-login.html" class="nav-item inactive mt-auto">
+                <i class="fal fa-sign-out-alt fa-fw text-muted" style="font-size: 1.5rem;"></i>
+                <span>Đăng xuất</span>
+            </a>
+        </aside>
 
-        <!-- Logout -->
-        <a href="admin-login.html" class="nav-item inactive mt-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="text-muted" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                <polyline points="16 17 21 12 16 7"></polyline>
-                <line x1="21" y1="12" x2="9" y2="12"></line>
-            </svg>
-            <span>Đăng xuất</span>
-        </a>
-    </aside>
-
-    <!-- Main Section -->
-    <main class="main-content">
-        <!-- Header -->
-        <div class="flex justify-between items-center w-full">
-            <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Quản lý Kỳ thi</h1>
-            <button
-                class="btn-primary flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-base font-bold tracking-tight"
-                onclick="navigateTo('admin-exam-edit.html')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                Tạo kỳ thi mới
-            </button>
-        </div>
-
-        <!-- Table Area -->
-        <div class="surface-raised rounded-3xl p-4 w-full flex-col">
-            <!-- Header Row -->
-            <div class="flex gap-4 w-full table-header items-center px-6 py-4">
-                <span class="font-secondary text-sm font-bold text-muted flex-1">Tên kỳ thi</span>
-                <span class="font-secondary text-sm font-bold text-muted" style="width: 150px;">Trạng thái</span>
-                <span class="font-secondary text-sm font-bold text-muted" style="width: 150px;">Hành động</span>
+        <!-- Main Section -->
+        <main class="main-content">
+            <!-- Header -->
+            <div class="flex justify-between items-center w-full">
+                <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Quản lý Kỳ thi</h1>
+                <button
+                    class="btn-primary flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-base font-bold tracking-tight"
+                    onclick="navigateTo('admin-exam-edit.html')"
+                >
+                    <i class="fal fa-plus fa-fw" style="font-size: 1.25rem;"></i>
+                    Tạo kỳ thi mới
+                </button>
             </div>
 
-            <!-- Row 1 -->
-            <div class="flex gap-4 w-full items-center px-6 py-5">
-                <span class="font-secondary text-base font-semibold text-main flex-1">Cơ sở dữ liệu - Giữa kỳ</span>
-                <div style="width: 150px;">
-                    <div class="badge-green rounded-full px-3 py-1 flex items-center gap-2" style="width:fit-content;">
-                        <span class="font-secondary text-xs font-bold">Đang mở</span>
+            <!-- Table Area -->
+            <div class="surface-raised rounded-3xl p-4 w-full flex-col">
+                <!-- Header Row -->
+                <div class="flex gap-4 w-full table-header items-center px-6 py-4">
+                    <span class="font-secondary text-sm font-bold text-muted flex-1">Tên kỳ thi</span>
+                    <span class="font-secondary text-sm font-bold text-muted" style="width: 150px">Trạng thái</span>
+                    <span class="font-secondary text-sm font-bold text-muted" style="width: 150px">Hành động</span>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="flex gap-4 w-full items-center px-6 py-5">
+                    <span class="font-secondary text-base font-semibold text-main flex-1">Cơ sở dữ liệu - Giữa kỳ</span>
+                    <div style="width: 150px">
+                        <div
+                            class="badge-green rounded-full px-3 py-2 flex items-center gap-2"
+                            style="width: fit-content"
+                        >
+                            <span class="font-secondary text-xs font-bold">Đang mở</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-3" style="width: 150px">
+                        <button
+                            class="btn-ghost rounded-lg p-3 font-secondary text-xs"
+                            onclick="navigateTo('admin-exam-edit.html')"
+                        >
+                            Sửa
+                        </button>
+                        <button class="btn-ghost rounded-lg p-3 font-secondary text-xs text-red">Xóa</button>
                     </div>
                 </div>
-                <div class="flex gap-3" style="width: 150px;">
-                    <button class="btn-ghost rounded-lg p-3 font-secondary text-xs"
-                        onclick="navigateTo('admin-exam-edit.html')">Sửa</button>
-                    <button class="btn-ghost rounded-lg p-3 font-secondary text-xs text-red">Xóa</button>
-                </div>
-            </div>
 
-            <!-- Row 2 -->
-            <div class="flex gap-4 w-full items-center px-6 py-5">
-                <span class="font-secondary text-base font-semibold text-main flex-1">Mạng máy tính - Cuối kỳ</span>
-                <div style="width: 150px;">
-                    <div class="badge-red rounded-full px-3 py-1 flex items-center gap-2" style="width:fit-content;">
-                        <span class="font-secondary text-xs font-bold">Đã đóng</span>
+                <!-- Row 2 -->
+                <div class="flex gap-4 w-full items-center px-6 py-5">
+                    <span class="font-secondary text-base font-semibold text-main flex-1">Mạng máy tính - Cuối kỳ</span>
+                    <div style="width: 150px">
+                        <div
+                            class="badge-red rounded-full px-3 py-2 flex items-center gap-2"
+                            style="width: fit-content"
+                        >
+                            <span class="font-secondary text-xs font-bold">Đã đóng</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-3" style="width: 150px">
+                        <button
+                            class="btn-ghost rounded-lg p-3 font-secondary text-xs"
+                            onclick="navigateTo('admin-exam-edit.html')"
+                        >
+                            Sửa
+                        </button>
+                        <button class="btn-ghost rounded-lg p-3 font-secondary text-xs text-red">Xóa</button>
                     </div>
                 </div>
-                <div class="flex gap-3" style="width: 150px;">
-                    <button class="btn-ghost rounded-lg p-3 font-secondary text-xs"
-                        onclick="navigateTo('admin-exam-edit.html')">Sửa</button>
-                    <button class="btn-ghost rounded-lg p-3 font-secondary text-xs text-red">Xóa</button>
-                </div>
             </div>
+        </main>
 
-        </div>
-
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
