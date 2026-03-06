@@ -10,19 +10,20 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+        <link rel="stylesheet" href="effects.css" />
     </head>
 
     <body class="flex flex-row h-screen">
         <aside class="sidebar justify-between">
             <div class="flex-col gap-10 w-full">
                 <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
-                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem;"></i>
+                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem"></i>
                     <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
                 </div>
 
                 <nav class="flex-col gap-3 w-full">
                     <div class="nav-item active" onclick="navigateTo('admin-dashboard.html')">
-                        <i class="fal fa-th-large fa-fw text-red" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-th-large fa-fw text-red" style="font-size: 1.25rem"></i>
                         <span>Về Quản lý Kỳ thi</span>
                     </div>
                 </nav>
@@ -87,6 +88,8 @@
             </div>
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/motion@12.4.7/dist/motion.js"></script>
         <script src="script.js"></script>
+        <script src="effects.js"></script>
     </body>
 </html>

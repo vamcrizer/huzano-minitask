@@ -10,6 +10,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+        <link rel="stylesheet" href="effects.css" />
     </head>
 
     <body class="flex flex-row h-screen">
@@ -21,22 +22,22 @@
             <div class="flex-col gap-8 w-full">
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
-                    <i class="fas fa-graduation-cap fa-fw text-red" style="font-size: 2rem;"></i>
+                    <i class="fas fa-graduation-cap fa-fw text-red" style="font-size: 2rem"></i>
                     <span class="font-primary text-xl font-bold text-red-dark tracking-tight">PTIT EXAM</span>
                 </div>
 
                 <!-- Nav Menu -->
                 <nav class="flex-col gap-3 w-full">
                     <div class="nav-item active">
-                        <i class="fal fa-th-large fa-fw" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-th-large fa-fw" style="font-size: 1.25rem"></i>
                         <span>Kỳ thi của tôi</span>
                     </div>
                     <div class="nav-item inactive">
-                        <i class="fal fa-clock fa-fw" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-clock fa-fw" style="font-size: 1.25rem"></i>
                         <span>Kết quả thi</span>
                     </div>
                     <div class="nav-item inactive">
-                        <i class="fal fa-user fa-fw" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-user fa-fw" style="font-size: 1.25rem"></i>
                         <span>Hồ sơ cá nhân</span>
                     </div>
                 </nav>
@@ -44,7 +45,7 @@
 
             <!-- Logout -->
             <a href="index.html" class="nav-item inactive mt-auto">
-                <i class="fal fa-sign-out-alt fa-fw text-muted" style="font-size: 1.5rem;"></i>
+                <i class="fal fa-sign-out-alt fa-fw text-muted" style="font-size: 1.5rem"></i>
                 <span>Đăng xuất</span>
             </a>
         </aside>
@@ -58,18 +59,18 @@
                 </button>
                 <div class="flex-col gap-2 w-full">
                     <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Danh sách Kỳ thi</h1>
-                <p class="font-secondary text-base text-muted">Chọn kỳ thi để bắt đầu làm bài.</p>
+                    <p class="font-secondary text-base text-muted">Chọn kỳ thi để bắt đầu làm bài.</p>
                 </div>
             </div>
 
             <!-- Toolbar -->
             <div class="flex gap-4 w-full items-center">
                 <div class="surface-sunken rounded-4xl py-3 px-6 flex items-center gap-3 w-full max-w-md">
-                    <i class="fal fa-search fa-fw text-muted" style="font-size: 1.25rem;"></i>
+                    <i class="fal fa-search fa-fw text-muted" style="font-size: 1.25rem"></i>
                     <input type="text" class="input-field" placeholder="Tìm kiếm..." />
                 </div>
                 <div class="surface-raised rounded-4xl py-3 px-6 flex items-center gap-3 cursor-pointer">
-                    <i class="fal fa-filter fa-fw text-main" style="font-size: 1.25rem;"></i>
+                    <i class="fal fa-filter fa-fw text-main" style="font-size: 1.25rem"></i>
                     <span class="font-secondary text-base font-semibold text-main">Loại: Tất cả</span>
                 </div>
             </div>
@@ -234,6 +235,8 @@
             </div>
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/motion@12.4.7/dist/motion.js"></script>
         <script src="script.js"></script>
+        <script src="effects.js"></script>
     </body>
 </html>

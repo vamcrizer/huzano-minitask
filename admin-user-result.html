@@ -10,19 +10,20 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+        <link rel="stylesheet" href="effects.css" />
     </head>
 
     <body class="flex flex-row h-screen">
         <aside class="sidebar justify-between">
             <div class="flex-col gap-10 w-full">
                 <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
-                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem;"></i>
+                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem"></i>
                     <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
                 </div>
 
                 <nav class="flex-col gap-3 w-full">
                     <div class="nav-item active" onclick="navigateTo('admin-users.html')">
-                        <i class="fal fa-arrow-left fa-fw text-red" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-arrow-left fa-fw text-red" style="font-size: 1.25rem"></i>
                         <span>Về Quản lý Sinh viên</span>
                     </div>
                 </nav>
@@ -34,7 +35,7 @@
             <div class="flex justify-between items-center w-full">
                 <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Kết quả Sinh viên</h1>
                 <div class="surface-sunken rounded-2xl py-3 px-6 flex items-center gap-3 w-64">
-                    <i class="fal fa-search fa-fw text-muted" style="font-size: 1rem;"></i>
+                    <i class="fal fa-search fa-fw text-muted" style="font-size: 1rem"></i>
                     <input type="text" class="input-field" placeholder="Tìm Mã SV / Tên..." />
                 </div>
             </div>
@@ -42,7 +43,7 @@
             <!-- Profile Card -->
             <div class="surface-raised rounded-3xl p-8 w-full flex items-center gap-6">
                 <div class="surface-sunken rounded-full w-20 h-20 flex justify-center items-center">
-                    <i class="fal fa-user fa-fw text-muted" style="font-size: 2rem;"></i>
+                    <i class="fal fa-user fa-fw text-muted" style="font-size: 2rem"></i>
                 </div>
                 <div class="flex-col gap-2 flex-1">
                     <h2 class="font-primary text-3xl font-bold text-main tracking-tight">Nguyễn Văn A - B20DCCN001</h2>
@@ -52,7 +53,7 @@
                     class="surface-sunken flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-sm font-bold tracking-tight text-main cursor-pointer"
                     style="border: none"
                 >
-                    <i class="fal fa-print fa-fw" style="font-size: 1.25rem;"></i>
+                    <i class="fal fa-print fa-fw" style="font-size: 1.25rem"></i>
                     In báo cáo
                 </button>
             </div>
@@ -110,6 +111,8 @@
             </div>
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/motion@12.4.7/dist/motion.js"></script>
         <script src="script.js"></script>
+        <script src="effects.js"></script>
     </body>
 </html>
