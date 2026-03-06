@@ -1,3 +1,15 @@
+// Sidebar toggle for mobile
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('sidebarOverlay');
+    if (sidebar) {
+        sidebar.classList.toggle('open');
+    }
+    if (overlay) {
+        overlay.classList.toggle('open');
+    }
+}
+
 // Basic navigation
 function navigateTo(url) {
     window.location.href = url;

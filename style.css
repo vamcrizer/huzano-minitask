@@ -677,3 +677,133 @@ a {
 .hidden {
     display: none !important;
 }
+
+/* ===== RESPONSIVE ===== */
+
+/* Hamburger menu button (hidden by default) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    display: none;
+}
+
+/* Tablet: <= 1024px */
+@media (max-width: 1024px) {
+    /* Dashboard: sidebar collapses */
+    .sidebar {
+        position: fixed;
+        left: -18rem;
+        top: 0;
+        z-index: 100;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 99;
+    }
+
+    .sidebar-overlay.open {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-content {
+        padding: 2rem;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Exam: stack question + nav vertically */
+    .exam-body {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        overflow-y: auto;
+    }
+
+    .exam-body .exam-nav {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Topbar */
+    .topbar {
+        padding: 0 1.5rem;
+        gap: 0.75rem;
+    }
+}
+
+/* Mobile: <= 768px */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+
+    /* Dashboard cards: single column */
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Exam topbar: stack */
+    .topbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .exam-body {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    /* Index login: full width, less padding */
+    .login-card {
+        margin: 1rem;
+        padding: 2rem !important;
+        border-radius: 1.5rem !important;
+    }
+}
+
+/* Small mobile: <= 480px */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .topbar {
+        padding: 0.75rem;
+    }
+
+    .login-card {
+        margin: 0.5rem;
+        padding: 1.5rem !important;
+    }
+
+    /* Exam question cards */
+    .surface-raised.rounded-3xl.p-8 {
+        padding: 1.25rem;
+    }
+}

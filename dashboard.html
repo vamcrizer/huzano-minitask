@@ -13,8 +13,11 @@
     </head>
 
     <body class="flex flex-row h-screen">
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
         <!-- Sidebar -->
-        <aside class="sidebar justify-between">
+        <aside class="sidebar justify-between" id="sidebar">
             <div class="flex-col gap-8 w-full">
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
@@ -48,10 +51,15 @@
 
         <!-- Main Section -->
         <main class="main-content">
-            <!-- Header -->
-            <div class="flex-col gap-2 w-full">
-                <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Danh sách Kỳ thi</h1>
+            <!-- Mobile menu toggle -->
+            <div class="flex items-center gap-4">
+                <button class="menu-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="flex-col gap-2 w-full">
+                    <h1 class="font-primary text-4xl font-bold text-main tracking-tight">Danh sách Kỳ thi</h1>
                 <p class="font-secondary text-base text-muted">Chọn kỳ thi để bắt đầu làm bài.</p>
+                </div>
             </div>
 
             <!-- Toolbar -->
