@@ -10,6 +10,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+        <link rel="stylesheet" href="effects.css" />
     </head>
 
     <body class="flex flex-col h-screen overflow-hidden">
@@ -21,7 +22,7 @@
             </div>
 
             <div class="surface-sunken rounded-2xl py-3 px-6 flex items-center gap-3">
-                <i class="fal fa-clock fa-fw text-red" style="font-size: 1.5rem;"></i>
+                <i class="fal fa-clock fa-fw text-red" style="font-size: 1.5rem"></i>
                 <span class="font-primary text-2xl font-bold text-red-dark tracking-tight">45:00</span>
             </div>
 
@@ -54,8 +55,17 @@
 
                         <!-- Opt B (Selected visually) -->
                         <div id="opt1B" class="opt-card active" onclick="selectOption('1', 'opt1B')">
-                            <div class="opt-chk" style="border: none; background-color: var(--ptit-red); display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-check" style="color: white; font-size: 0.75rem;"></i>
+                            <div
+                                class="opt-chk"
+                                style="
+                                    border: none;
+                                    background-color: var(--ptit-red);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                "
+                            >
+                                <i class="fas fa-check" style="color: white; font-size: 0.75rem"></i>
                             </div>
                             <span class="font-secondary text-sm font-bold text-red-dark">B. SELECT</span>
                         </div>
@@ -88,7 +98,10 @@
             </div>
 
             <!-- Right: Nav Area -->
-            <aside class="surface-raised rounded-3xl p-8 flex-col gap-6 w-full exam-nav" style="max-width: 340px; height: 100%">
+            <aside
+                class="surface-raised rounded-3xl p-8 flex-col gap-6 w-full exam-nav"
+                style="max-width: 340px; height: 100%"
+            >
                 <h2 class="font-primary text-xl font-bold text-main tracking-tight">Danh sách câu hỏi</h2>
 
                 <div class="flex gap-3" style="flex-wrap: wrap">
@@ -103,6 +116,8 @@
             </aside>
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/motion@12.4.7/dist/motion.js"></script>
         <script src="script.js"></script>
+        <script src="effects.js"></script>
     </body>
 </html>

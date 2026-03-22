@@ -10,6 +10,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+        <link rel="stylesheet" href="effects.css" />
     </head>
 
     <body class="flex flex-row h-screen">
@@ -18,22 +19,22 @@
             <div class="flex-col gap-10 w-full">
                 <!-- Logo -->
                 <div class="flex items-center gap-3 p-4 rounded-2xl surface-raised w-max">
-                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem;"></i>
+                    <i class="fal fa-lock fa-fw text-red" style="font-size: 1.25rem"></i>
                     <h1 class="font-primary text-xl font-bold text-main tracking-tight">ADMIN EXAM</h1>
                 </div>
 
                 <!-- Nav Menu -->
                 <nav class="flex-col gap-3 w-full">
                     <div class="nav-item inactive" onclick="navigateTo('admin-dashboard.html')">
-                        <i class="fal fa-th-large fa-fw" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-th-large fa-fw" style="font-size: 1.25rem"></i>
                         <span>Quản lý Kỳ thi</span>
                     </div>
                     <div class="nav-item inactive" onclick="navigateTo('admin-users.html')">
-                        <i class="fal fa-users fa-fw" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-users fa-fw" style="font-size: 1.25rem"></i>
                         <span>Quản lý Sinh viên</span>
                     </div>
                     <div class="nav-item active" onclick="navigateTo('admin-stats.html')">
-                        <i class="fal fa-chart-bar fa-fw text-red" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-chart-bar fa-fw text-red" style="font-size: 1.25rem"></i>
                         <span>Thống kê</span>
                     </div>
                 </nav>
@@ -41,7 +42,7 @@
 
             <!-- Logout -->
             <a href="admin-login.html" class="nav-item inactive mt-auto">
-                <i class="fal fa-sign-out-alt fa-fw text-muted" style="font-size: 1.5rem;"></i>
+                <i class="fal fa-sign-out-alt fa-fw text-muted" style="font-size: 1.5rem"></i>
                 <span>Đăng xuất</span>
             </a>
         </aside>
@@ -59,7 +60,7 @@
                         class="surface-sunken flex items-center gap-2 rounded-xl py-3 px-6 font-secondary text-base font-bold tracking-tight text-main cursor-pointer"
                         style="border: none"
                     >
-                        <i class="fal fa-download fa-fw" style="font-size: 1.25rem;"></i>
+                        <i class="fal fa-download fa-fw" style="font-size: 1.25rem"></i>
                         Xuất PDF
                     </button>
                 </div>
@@ -103,6 +104,8 @@
             </div>
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/motion@12.4.7/dist/motion.js"></script>
         <script src="script.js"></script>
+        <script src="effects.js"></script>
     </body>
 </html>

@@ -10,13 +10,14 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" />
+        <link rel="stylesheet" href="effects.css" />
     </head>
 
     <body class="flex items-center justify-center p-12">
         <div class="surface-raised rounded-4xl p-12 flex-col items-center gap-8 w-full" style="max-width: 600px">
             <!-- Header -->
             <div class="flex-col items-center gap-2 text-center">
-                <i class="fal fa-award fa-fw" style="font-size: 4rem; color: #EAB308; margin-bottom: 0.5rem;"></i>
+                <i class="fal fa-award fa-fw" style="font-size: 4rem; color: #eab308; margin-bottom: 0.5rem"></i>
                 <h1 class="font-primary text-3xl font-bold text-main tracking-tight">Kết quả làm bài</h1>
                 <p class="font-secondary text-base text-muted">Cơ sở dữ liệu - Giữa kỳ</p>
             </div>
@@ -51,6 +52,84 @@
             </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/motion@12.4.7/dist/motion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
         <script src="script.js"></script>
+        <script src="effects.js"></script>
+        <script>
+            // Fire confetti immediately on result page load
+            window.addEventListener('load', function () {
+                if (typeof confetti !== 'function') return;
+
+                var defaults = { startVelocity: 45, spread: 360, ticks: 120, zIndex: 9999 };
+                function fire(ratio, opts) {
+                    confetti(Object.assign({}, defaults, opts, { particleCount: Math.floor(250 * ratio) }));
+                }
+
+                // Big center burst
+                fire(0.25, { spread: 26, startVelocity: 55 });
+                fire(0.2, { spread: 60 });
+                fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+                fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+                fire(0.1, { spread: 120, startVelocity: 45 });
+
+                // Side cannons
+                setTimeout(function () {
+                    confetti({
+                        particleCount: 80,
+                        angle: 60,
+                        spread: 70,
+                        origin: { x: 0, y: 0.6 },
+                        zIndex: 9999,
+                        colors: ['#DC2626', '#EAB308', '#22c55e', '#6366f1', '#ec4899'],
+                    });
+                    confetti({
+                        particleCount: 80,
+                        angle: 120,
+                        spread: 70,
+                        origin: { x: 1, y: 0.6 },
+                        zIndex: 9999,
+                        colors: ['#DC2626', '#EAB308', '#22c55e', '#6366f1', '#ec4899'],
+                    });
+                }, 400);
+
+                // Continuous rain 3s
+                var end = Date.now() + 3000;
+                var interval = setInterval(function () {
+                    if (Date.now() > end) return clearInterval(interval);
+                    confetti({
+                        particleCount: 3,
+                        angle: 60,
+                        spread: 55,
+                        origin: { x: 0, y: 0.5 },
+                        zIndex: 9999,
+                        colors: ['#DC2626', '#EAB308', '#22c55e', '#a855f7', '#0ea5e9'],
+                    });
+                    confetti({
+                        particleCount: 3,
+                        angle: 120,
+                        spread: 55,
+                        origin: { x: 1, y: 0.5 },
+                        zIndex: 9999,
+                        colors: ['#DC2626', '#EAB308', '#22c55e', '#a855f7', '#0ea5e9'],
+                    });
+                }, 50);
+
+                // Star burst at 1.5s
+                setTimeout(function () {
+                    confetti({
+                        particleCount: 100,
+                        spread: 360,
+                        startVelocity: 30,
+                        gravity: 0.5,
+                        shapes: ['star'],
+                        scalar: 1.5,
+                        origin: { x: 0.5, y: 0.4 },
+                        zIndex: 9999,
+                        colors: ['#FFD700', '#FFA500', '#FF6347', '#FF4500'],
+                    });
+                }, 1500);
+            });
+        </script>
     </body>
 </html>
